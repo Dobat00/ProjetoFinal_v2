@@ -1,0 +1,25 @@
+﻿@model Cliente
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary ">Adicionar cliente</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Nome"></label>
+            <input asp-for="Nome" class="form-control" />
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Valor"></label>
+            <input asp-for="Valor" class="form-control" />
+            <span asp-validation-for="Valor" class="text-danger"></span>
+
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Adicionar</button>
+        <a asp-controller="Clientes" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Voltar a lista
+        </a>
+    </div>
+</form>
